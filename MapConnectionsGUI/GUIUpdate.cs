@@ -12,12 +12,11 @@ namespace MapConnectionsGUI
 
         private void _setMapBackground()
         {
-            //_ib.
-            //if (cnvMap.IsInitialized)
-            //{
-            //    _ib.ImageSource = new BitmapImage(new Uri(@"Assets\Images\WorldMap.jpg", UriKind.Relative));
-            //    cnvMap.Background = _ib;
-            //}
+            if (cnvMap.IsInitialized)
+            {
+                _ib.ImageSource = new BitmapImage(new Uri(@"Assets\Images\WorldMap.jpg", UriKind.Relative));
+                cnvMap.Background = _ib;
+            }
         }
 
         private void _updateStatusBar()
