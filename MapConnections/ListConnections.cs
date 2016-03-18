@@ -22,6 +22,7 @@ namespace MapConnections
                 TcpConnectionInformation[] connections = properties.GetActiveTcpConnections();
                 foreach (TcpConnectionInformation c in connections)
                 {
+                    //TODO: Get local IP address and WAN ip address and remove it from the list of results. Currently used method is insufficient
                     if (c.LocalEndPoint.ToString().Contains("::1") || c.RemoteEndPoint.ToString().Contains("::1"))
                         continue;
                     if (c.LocalEndPoint.ToString().Contains("127.0.0.1") &&
